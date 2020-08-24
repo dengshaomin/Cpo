@@ -1,0 +1,4 @@
+include ':cporegister'
+include ':cpolib'
+include ':app'
+rootProject.name = "Cpo"
