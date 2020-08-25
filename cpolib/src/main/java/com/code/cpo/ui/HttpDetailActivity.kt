@@ -24,6 +24,9 @@ class HttpDetailActivity : AppCompatActivity() {
             headers.text = httpTime?.headersStr
             request_body.text = httpTime?.requestBodyStr
             response.text = httpTime?.responseStr?.let { it1 -> JsonFormatUtil.formatString(it1) }
+            time.text = httpTime?.totalTime.toString() + "ms"
+            dns.text = "dns: " + httpTime?.dnsTime.toString() + "ms"
+            size.text = httpTime?.size.toString() + "Kb"
         }
     }
 }
